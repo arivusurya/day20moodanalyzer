@@ -4,15 +4,20 @@
 namespace MoodAnalyserWorkspace{
 
 
-    public class Program{
+  class Program
+    {
         public static void Main(string[] args)
         {
-            MoodAnalyser obj = new MoodAnalyser();
-            string value =obj.analyzeMood("I am in Any Mood");
-            Console.Write(value);
+            try
+            {
+                AnalyzeMood mood = new AnalyzeMood("");
+                mood.Analyze();
+            }
+            catch (ArgumentException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
     }
-
-
 
 }
