@@ -4,7 +4,7 @@
 namespace MoodAnalyserWorkspace{
 
 
-  class Program
+   class Program
     {
         public static void Main(string[] args)
         {
@@ -13,7 +13,7 @@ namespace MoodAnalyserWorkspace{
                 AnalyzeMood mood = new AnalyzeMood("");
                 mood.Analyze();
             }
-            catch (ArgumentException ex)
+            catch (MoodAnalysisException ex)
             {
                 Console.WriteLine(ex.Message);
             }

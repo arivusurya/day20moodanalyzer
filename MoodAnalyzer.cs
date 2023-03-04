@@ -16,7 +16,7 @@ using System.Threading.Tasks;
         {
             if (string.IsNullOrEmpty(message))
             {
-                throw new ArgumentException("No message was passed");
+                throw new MoodAnalysisException("Exception Raised: No message was passed to determine user's mood!");
             }
             this.message = message;
         }
